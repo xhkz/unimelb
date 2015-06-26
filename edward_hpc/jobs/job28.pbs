@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#PBS -N xh_n2p8
+#PBS -A 685269
+#PBS -q fast
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:30:00
+
+cd $PBS_O_WORKDIR
+mpirun twitter_mpi.py

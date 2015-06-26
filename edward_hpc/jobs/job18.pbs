@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#PBS -N xh_n1p8
+#PBS -A 685269
+#PBS -q fast
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=00:30:00
+#PBS -l pmem=2000mb
+
+echo $PBS_O_HOST
+cd $PBS_O_WORKDIR
+
+python twitter_mp.py
