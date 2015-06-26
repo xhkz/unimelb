@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/mainw"
+                android:paddingBottom="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                tools:context="com.unimelb.breakout.MenuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/local_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:background="@drawable/play"
+            android:onClick="localGame"
+            android:text="@string/local_game"
+            android:layout_marginTop="84dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/remote_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:background="@drawable/play"
+            android:onClick="remoteGame"
+            android:text="@string/remote_game"
+            android:layout_below="@+id/local_game"
+            android:layout_alignLeft="@+id/local_game"
+            android:layout_alignStart="@+id/local_game" />
+
+        <Button
+            android:id="@+id/view_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:background="@drawable/oper"
+            android:onClick="viewScore"
+            android:text="@string/view_score"
+            android:layout_below="@+id/remote_game"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:background="@drawable/help"
+            android:onClick="help"
+            android:text="@string/help"
+            android:layout_below="@+id/view_score"
+            android:layout_alignLeft="@+id/view_score"
+            android:layout_alignStart="@+id/view_score" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:background="@drawable/close"
+            android:onClick="exit"
+            android:text="@string/exit_game"
+            android:layout_below="@+id/help"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <Switch
+        android:id="@+id/music_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:checked="true"
+        android:onClick="switchMusic"
+        android:text="Music"
+        android:textColor="#FFFFFF"/>
+</RelativeLayout>
