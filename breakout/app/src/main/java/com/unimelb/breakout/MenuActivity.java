@@ -5,8 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.unimelb.breakout.file.LevelParser;
 import com.unimelb.breakout.file.PropsUtils;
@@ -24,17 +24,17 @@ public class MenuActivity extends Activity implements AsyncResult {
     public static List<Level> levels;
     protected SoundManager soundManager;
     private ProgressDialog progress;
-    private Switch mSwitch;
+    private ToggleButton mToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        mSwitch = (Switch) findViewById(R.id.music_switch);
+        mToggle = (ToggleButton) findViewById(R.id.music_switch);
 
         progress = new ProgressDialog(this);
         soundManager = new SoundManager(getApplicationContext());
-        if (mSwitch.isChecked())
+        if (mToggle.isChecked())
             soundManager.play();
     }
 
@@ -46,7 +46,7 @@ public class MenuActivity extends Activity implements AsyncResult {
     }
 
     public void switchMusic(View view) {
-        if (mSwitch.isChecked()) {
+        if (mToggle.isChecked()) {
             soundManager.play();
         } else {
             soundManager.pause();

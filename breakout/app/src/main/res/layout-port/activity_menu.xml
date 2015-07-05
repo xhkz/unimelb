@@ -76,7 +76,7 @@
         android:layout_above="@+id/remote_game"
         android:layout_centerHorizontal="true" />
 
-    <Switch
+    <ToggleButton
         android:id="@+id/music_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,6 +85,6 @@
         android:layout_alignParentTop="true"
         android:checked="true"
         android:onClick="switchMusic"
-        android:text="Music"
         android:textColor="#FFFFFF"/>
+
 </RelativeLayout>
